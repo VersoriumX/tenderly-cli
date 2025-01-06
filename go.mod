@@ -9,7 +9,7 @@ require (
 	github.com/ethereum/go-ethereum v1.13.15
 	github.com/flynn/json5 v0.0.0-20160717195620-7620272ed633
 	github.com/ghodss/yaml v1.0.0
-	github.com/go-git/go-git/v5 v5.11.0
+	github.com/go-git/go-git/v5 v5.13.1
 	github.com/google/go-github/v37 v37.0.0
 	github.com/gorilla/websocket v1.5.0
 	github.com/hashicorp/go-version v1.2.0
