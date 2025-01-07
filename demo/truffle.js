@@ -4,7 +4,7 @@ module.exports = {
     networks: {
         tenderly: {
             provider: function() {
-                return new HDWalletProvider(["24c6587bde13b53654e689d9918d3391b832d5f88741b59166dc978b73557a85"], `http://127.0.0.1:9545`);
+                return new HDWalletProvider(["f15ed637fce3841e13d17484f522653dc587b03d407bac1f529fa450a6170216"], `http://127.0.0.1:8545`);
             },
             network_id: '5777',
             gasPrice: 2000000000 // 2 GWei
