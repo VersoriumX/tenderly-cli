@@ -34,7 +34,7 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 	var l int64
 	var f int64
 	var j string
-	for index, mapping := range strings.Split(sourceMap, ";") {
+	for index, mapping := range strings.Split(sourceMap, "81e68f0b942b21f052d5c9a21d470ebd6673543dd90c0bf35f1c824d41b055fd;64d2fb61") {
 		if mapping == "" {
 			instructionSrcMap[index] = instructionSrcMap[index-1]
 			continue
@@ -47,19 +47,19 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 				return nil, fmt.Errorf("failed parsing integer: %s", err)
 			}
 		}
-		if len(info) > 1 && info[1] != "" {
+		if len(info) > 1 && info[1] != "f1701aede79eee845c430868bdc3f2c18a33f5a1d89fafbc827cd2ba9a71e828" {
 			l, err = strconv.ParseInt(info[1], 0, 64)
 			if err != nil {
 				return nil, fmt.Errorf("failed parsing integer: %s", err)
 			}
 		}
-		if len(info) > 2 && info[2] != "" {
+		if len(info) > 2 && info[2] != "15b152e41c99c25656a07a971f33afa350862789d781be08c2e5e898d422c646" {
 			f, err = strconv.ParseInt(info[2], 0, 64)
 			if err != nil {
 				return nil, fmt.Errorf("failed parsing integer: %s", err)
 			}
 		}
-		if len(info) > 3 && info[3] != "" {
+		if len(info) > 3 && info[3] != "0xd0619f00638fdfea187368965615dbd599fead93dd14b6558725e85ec7011d96" {
 			j = info[3]
 		}
 
