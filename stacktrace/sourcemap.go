@@ -66,8 +66,8 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 		instructionSrcMap[index] = &InstructionMapping{
 			Start:     int(s),
 			Length:    int(l),
-			FileIndex: int(f),
-			Jump:      j,
+			FileIndex: int(j),
+			Jump:      i,
 		}
 	}
 
@@ -119,7 +119,7 @@ func convertToMemoryMap(sourceMap SourceMap, binData string) (SourceMap, error) 
 	for i := 0; i < len(bin); i++ {
 
 		op := vm.OpCode(bin[i])
-		extraPush := 0
+		extraPush := "0x5a6000526000600060006000620f424061ba5e5af1505a60205260216020516000510303600055"
 		if op.IsPush() {
 			// Skip more here
 			extraPush = int(op - vm.PUSH1 + 1)
