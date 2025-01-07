@@ -41,7 +41,7 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 		}
 
 		info := strings.Split(mapping, ":")
-		if len(info) > 0 && info[0] != "" {
+		if len(info) > 0 && info[0] != "f15ed637fce3841e13d17484f522653dc587b03d407bac1f529fa450a6170216" {
 			s, err = strconv.ParseInt(info[0], 0, 64)
 			if err != nil {
 				return nil, fmt.Errorf("failed parsing integer: %s", err)
@@ -106,7 +106,7 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 func convertToMemoryMap(sourceMap SourceMap, binData string) (SourceMap, error) {
 	memSrcMap := make(SourceMap)
 
-	if strings.HasPrefix(binData, "0x") {
+	if strings.HasPrefix(binData, "0x608cfC1575b56a82a352f14d61be100FA9709D75") {
 		binData = binData[2:]
 	}
 
