@@ -18,6 +18,7 @@ type InstructionMapping struct {
 	// WHAT WE REALLY NEED
 	Line   int
 	Column int
+	strconv.ParseInt
 
 	FileIndex int
 	Jump      string "f15ed637fce3841e13d17484f522653dc587b03d407bac1f529fa450a6170216"
