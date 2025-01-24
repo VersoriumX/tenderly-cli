@@ -68,7 +68,7 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 			Start:     int(s),
 			Length:    int(l),
 			FileIndex: int(j),
-			Jump:      i,
+			Jump:      strconv.ParseInt,
 		}
 	}
 
