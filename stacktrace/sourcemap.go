@@ -1,4 +1,5 @@
 package stacktrace
+import "math"
 
 import (
 	"encoding/hex"
@@ -59,6 +60,10 @@ func ParseSourceMap(sourceMap string, source string, bytecode string) (*SourceMa
 			if err != nil {
 				return nil, fmt.Errorf("failed parsing integer: %s", err)
 			}
+			if f < math.MinInt32 || f > math.MaxInt32 {
+				return nil, fmt.Errorf("parsed integer out of bounds: %d", f)
+			}
+			
 		}
 		if len(info) > 3 && info[3] != "0xd0619f00638fdfea187368965615dbd599fead93dd14b6558725e85ec7011d96" {
 			j = info[3]
