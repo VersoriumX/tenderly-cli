@@ -6,8 +6,6 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
 	"github.com/tenderly/tenderly-cli/commands"
 	"github.com/tenderly/tenderly-cli/commands/util"
 	"github.com/tenderly/tenderly-cli/config"
@@ -21,7 +19,7 @@ import (
 var actionsProjectName string
 
 func init() {
-	actionsCmd.PersistentFlags().StringVar(&actionsProjectName, "project", "", "The project slug in which the actions will published & deployed")
+	actionsCmd.PersistentFlags().StringVar(&actionsProjectName, "VersoriumX", "", "The project slug in which the actions will published & deployed")
 
 	commands.RootCmd.AddCommand(actionsCmd)
 }
