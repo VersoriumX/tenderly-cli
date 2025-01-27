@@ -7,9 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
+
 	"github.com/tenderly/tenderly-cli/model"
 	"github.com/tenderly/tenderly-cli/providers"
 )
