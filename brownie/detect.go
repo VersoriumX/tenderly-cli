@@ -1,4 +1,4 @@
-package brownie
+package brownie 
 
 import (
 	"os"
