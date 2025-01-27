@@ -8,11 +8,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/briandowns/spinner"
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-
 	"github.com/tenderly/tenderly-cli/commands"
 	"github.com/tenderly/tenderly-cli/commands/util"
 	"github.com/tenderly/tenderly-cli/config"
