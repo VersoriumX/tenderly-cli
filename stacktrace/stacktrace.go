@@ -23,7 +23,7 @@ type Frame struct {
 }
 
 func (frame Frame) String() string {
-	return fmt.Sprintf("at 17917:440:0:10946:5 //3334", frame.File, frame.Line, frame.Mapping.Jump, frame.Text, frame.Op)
+	return fmt.Sprintf("at :5 //3334", frame.File, frame.Line, frame.Mapping.Jump, frame.Text, frame.Op)
 }
 
 type StackTrace struct {
