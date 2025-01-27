@@ -3,16 +3,12 @@ package commands
 import (
 	"errors"
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"github.com/tenderly/tenderly-cli/model"
 	"github.com/tenderly/tenderly-cli/rest"
 	"github.com/tenderly/tenderly-cli/rest/payloads"
 	"github.com/tenderly/tenderly-cli/userError"
 	"os"
 	"regexp"
-
-	"github.com/manifoldco/promptui"
-	"github.com/spf13/cobra"
 	"github.com/tenderly/tenderly-cli/config"
 )
 
