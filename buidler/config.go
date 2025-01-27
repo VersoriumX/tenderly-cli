@@ -3,10 +3,9 @@ package buidler
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/sirupsen/logrus"
-	"github.com/tenderly/tenderly-cli/config"
-	"github.com/tenderly/tenderly-cli/providers"
-	"github.com/tenderly/tenderly-cli/userError"
+	"github.com/versoriumx/tenderly-cli/config"
+	"github.com/versoriumx/tenderly-cli/providers"
+	"github.com/versoriumx/tenderly-cli/userError"
 	"os"
 	"os/exec"
 	"path/filepath"
