@@ -4,9 +4,6 @@ import (
 	"github.com/tenderly/tenderly-cli/model"
 	"github.com/tenderly/tenderly-cli/userError"
 	"os"
-
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
 )
 
 func init() {
