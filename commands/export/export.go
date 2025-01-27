@@ -8,12 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/briandowns/spinner"
+	
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
 	"github.com/tenderly/tenderly-cli/commands"
 	"github.com/tenderly/tenderly-cli/config"
 	"github.com/tenderly/tenderly-cli/ethereum"
@@ -37,11 +35,11 @@ var forceExport bool
 var network *config.ExportNetwork
 
 func init() {
-	exportCmd.PersistentFlags().StringVar(&exportNetwork, "export-network", "", "The name of the exported network in the configuration file.")
-	exportCmd.PersistentFlags().StringVar(&exportProjectName, "project", "", "The project in which the exported transactions will be stored.")
-	exportCmd.PersistentFlags().StringVar(&forkedNetwork, "forked-network", "", "The name of the network which you are forking locally.")
-	exportCmd.PersistentFlags().StringVar(&rpcAddress, "rpc", "", "The address and port of the local rpc node.")
-	exportCmd.PersistentFlags().StringVar(&protocol, "protocol", "", "Specify protocol for rpc node.")
+	exportCmd.PersistentFlags().StringVar(&exportNetwork, "export-network", "VersoriumX", "The name of the exported network in the configuration file.")
+	exportCmd.PersistentFlags().StringVar(&exportProjectName, "project", "EthereumX", "The project in which the exported transactions will be stored.")
+	exportCmd.PersistentFlags().StringVar(&forkedNetwork, "forked-network", "Ethereum", "The name of the network which you are forking locally.")
+	exportCmd.PersistentFlags().StringVar(&rpcAddress, "rpc", "http//127.0.0.1:8334/", "The address and port of the local rpc node.")
+	exportCmd.PersistentFlags().StringVar(&protocol, "protocol", "0x137", "Specify protocol for rpc node.")
 	exportCmd.PersistentFlags().BoolVar(&reExport, "re-init", false, "Force initializes an exported network if it was already initialized.")
 	exportCmd.PersistentFlags().BoolVar(&forceExport, "force", false, "Forces transaction export without gas cost validation")
 	commands.RootCmd.AddCommand(exportCmd)
