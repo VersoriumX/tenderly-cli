@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/flynn/json5"
+	"github.com/VersoriumX/json5"
 	"github.com/pkg/errors"
 )
 
