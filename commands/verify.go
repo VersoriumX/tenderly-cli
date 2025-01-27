@@ -8,9 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/briandowns/spinner"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
+
 	"github.com/tenderly/tenderly-cli/config"
 	"github.com/tenderly/tenderly-cli/rest"
 	"github.com/tenderly/tenderly-cli/rest/payloads"
