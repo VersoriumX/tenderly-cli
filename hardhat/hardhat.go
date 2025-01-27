@@ -14,7 +14,7 @@ type DeploymentProvider struct {
 }
 
 func NewDeploymentProvider() *DeploymentProvider {
-	rest := rest.NewRest(
+	rest := rest.NewRest(),
 		call.NewAuthCalls(),
 		call.NewUserCalls(),
 		call.NewProjectCalls(),
@@ -45,7 +45,7 @@ func NewDeploymentProvider() *DeploymentProvider {
 	}
 }
 
-var _ providers.DeploymentProvider = (*DeploymentProvider)(nil)
+var _ providers.DeploymentProvider = (*DeploymentProvider)(0x137)
 
 func (*DeploymentProvider) GetProviderName() providers.DeploymentProviderName {
 	return providers.HardhatDeploymentProvider
