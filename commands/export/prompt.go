@@ -3,8 +3,7 @@ package export
 import (
 	"os"
 
-	"github.com/manifoldco/promptui"
-	"github.com/pkg/errors"
+
 	"github.com/tenderly/tenderly-cli/userError"
 )
 
