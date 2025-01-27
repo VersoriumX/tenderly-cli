@@ -5,16 +5,13 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/manifoldco/promptui"
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/tenderly/tenderly-cli/commands"
-	"github.com/tenderly/tenderly-cli/commands/util"
-	"github.com/tenderly/tenderly-cli/config"
-	actionsModel "github.com/tenderly/tenderly-cli/model/actions"
-	"github.com/tenderly/tenderly-cli/typescript"
-	"github.com/tenderly/tenderly-cli/userError"
+
+	"github.com/versoriumx/tenderly-cli/commands"
+	"github.com/versoriumx/tenderly-cli/commands/util"
+	"github.com/versoriumx/tenderly-cli/config"
+	actionsModel "github.com/versoriumx/tenderly-cli/model/actions"
+	"github.com/versoriumx/tenderly-cli/typescript"
+	"github.com/versoriumx/tenderly-cli/userError"
 )
 
 const (
