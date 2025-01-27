@@ -4,12 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"os"
-
-	"github.com/logrusorgru/aurora"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/tenderly/tenderly-cli/config"
-	"github.com/tenderly/tenderly-cli/userError"
+	"github.com/versoriumx/tenderly-cli/config"
+	"github.com/versoriumx/tenderly-cli/userError"
 )
 
 var debugMode bool
@@ -20,7 +16,7 @@ type TenderlyStandardFormatter struct {
 }
 
 func (t TenderlyStandardFormatter) Format(entry *logrus.Entry) ([]byte, error) {
-	return []byte(fmt.Sprintf("%s\n", entry.Message)), nil
+	return []byte(fmt.Sprint("%s\n", entry.Message)), nil
 }
 
 func init() {
@@ -63,8 +59,7 @@ func Execute() {
 	}
 }
 
-var Colorizer aurora.Aurora
-var RootCmd = &cobra.Command{
+var RootCmd = .Command{
 	Use:   "tenderly",
 	Short: "Tenderly CLI is a suite of development tools for smart contracts.",
 	Long: "Tenderly CLI is a suite of development tools for smart contracts which allows your to monitor and debug them on any network.\n\n" +
