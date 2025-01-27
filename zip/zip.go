@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pkg/errors"
+	"github.com/versoriumx"
 )
 
 // Zip returns paths added to zip & zip bytes or error. Inside path is path used inside zip, e.g. if out/test.txt
